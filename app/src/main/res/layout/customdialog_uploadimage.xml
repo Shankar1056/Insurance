@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="10dp">
+
+		<TextView
+			android:id="@+id/wait"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:text="@string/uploadingdocuments"
+			android:textColor="@color/dialogtextcolor"
+			android:textSize="15dp"
+			android:textStyle="bold"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/upload"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:text="ploading : "
+				android:textColor="@color/dialogtextcolor"
+				android:textSize="15dp"
+				android:textStyle="bold"/>
+
+			<TextView
+				android:id="@+id/foldername"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="10dp"
+				android:text=""
+				android:textColor="@color/dialogtextcolor"
+				android:textSize="15dp"
+				android:textStyle="bold"/>
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/uploadcount"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="5dp"
+			android:text=""
+			android:textColor="@color/dialogtextcolor"
+			android:textSize="15dp"
+			android:textStyle="bold"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:orientation="horizontal">
+
+			<ProgressBar
+				android:id="@+id/progresss"
+				style="?android:attr/progressBarStyleHorizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight=".2"
+				android:indeterminate="true"
+				android:max="100"
+				android:padding="8dp"/>
+
+			<TextView
+				android:id="@+id/progresspercent"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight=".8"
+				android:gravity="center"
+				android:textColor="@color/colorOrange"/>
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/status"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="5dp"
+			android:autoLink="web"
+			android:text=""
+			android:textColor="@android:color/white"
+			android:textSize="15dp"
+			android:textStyle="bold"/>
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:background="#3E80B4"
+			android:orientation="horizontal"
+			android:visibility="gone">
+
+			<Button
+				android:id="@+id/btn_yes"
+				android:layout_width="100dp"
+				android:layout_height="30dp"
+				android:background="@android:color/white"
+				android:clickable="true"
+				android:text="Yes"
+				android:textColor="#5DBCD2"
+				android:textStyle="bold"/>
+
+			<Button
+				android:id="@+id/btn_no"
+				android:layout_width="100dp"
+				android:layout_height="30dp"
+				android:layout_marginLeft="5dp"
+				android:background="@android:color/white"
+				android:clickable="true"
+				android:text="No"
+				android:textColor="#5DBCD2"
+				android:textStyle="bold"/>
+		</LinearLayout>
+	</LinearLayout>
+</android.support.v7.widget.CardView>

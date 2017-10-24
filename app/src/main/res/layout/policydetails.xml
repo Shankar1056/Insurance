@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<include
+		android:id="@+id/toptool"
+		layout="@layout/toolbarlayout"/>
+<ScrollView
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_below="@+id/toptool"
+	android:paddingBottom="75dp">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+	<TextView
+		fontPath="fonts/CeliasMedium.otf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/colorstroke"
+		android:paddingBottom="10dp"
+		android:paddingLeft="15dp"
+		android:paddingTop="10dp"
+		android:textSize="18sp"
+		android:text="@string/selectvechiletype"
+		android:textColor="@color/colorHeading"
+		tools:ignore="MissingPrefix"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="18dp"
+		android:layout_marginRight="18dp"
+		android:layout_marginTop="20dp"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight=".5">
+
+				<android.support.v7.widget.AppCompatCheckBox
+					android:id="@+id/cb_yellow"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Yellow Board"/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight=".5">
+
+				<android.support.v7.widget.AppCompatCheckBox
+					android:id="@+id/cb_white"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="White Board"/>
+			</LinearLayout>
+		</LinearLayout>
+
+		<android.support.v7.widget.AppCompatCheckBox
+			android:id="@+id/cb_claimbonus"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:text="Apply For No Claim Bouns"/>
+
+		<TextView
+			android:id="@+id/termascondition"
+			android:layout_width="wrap_content"
+			android:text=""
+			android:layout_marginLeft="32dp"
+			android:layout_height="wrap_content"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/colorstroke"
+		android:orientation="horizontal"
+		android:paddingBottom="10dp"
+		android:paddingLeft="15dp"
+		android:paddingRight="15dp"
+		android:paddingTop="10dp">
+
+		<TextView
+			fontPath="fonts/CeliasMedium.otf"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/InsurancePlan"
+			android:textColor="@color/colorHeading"
+			tools:ignore="MissingPrefix"
+			android:textSize="18sp"
+			android:layout_weight=".44"/>
+		<TextView
+			android:id="@+id/idvvalue"
+			fontPath="fonts/CeliasMedium.otf"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text=""
+			android:textColor="@color/colorHeading"
+			tools:ignore="MissingPrefix"
+			android:textSize="13sp"
+			android:gravity="center|right"
+			android:layout_weight=".6"/>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginLeft="18dp">
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/rc_premium"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+			<!--<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="13dp">
+
+				<android.support.v7.widget.AppCompatRadioButton
+					android:id="@+id/compresive"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Comprehensive"
+					android:textSize="13sp"
+					android:layout_weight=".4"/>
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight=".6"
+					android:gravity="center|right"
+					android:text="RS. 1000"
+					android:paddingRight="18dp"
+					android:textColor="@color/colorHeading"/>
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"
+				android:background="#949494"
+				android:layout_marginTop="13dp"/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="13dp">
+
+				<android.support.v7.widget.AppCompatRadioButton
+					android:id="@+id/nildip"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Nildip"
+					android:textSize="13sp"
+					android:layout_weight=".4"/>
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight=".6"
+					android:gravity="center|right"
+					android:text="RS. 1000"
+					android:paddingRight="18dp"
+					android:textColor="@color/colorHeading"/>
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"
+				android:background="#949494"
+				android:layout_marginTop="13dp"/>-->
+	</LinearLayout>
+
+		</LinearLayout>
+	</ScrollView>
+	<Button
+		android:id="@+id/btnProceed"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginBottom="20dp"
+		android:layout_marginLeft="25dp"
+		android:layout_marginRight="25dp"
+		android:text="Proceed to pay 1000"
+		android:background="@drawable/gradient"
+		android:textAllCaps="false"
+		android:textColor="@color/colorWhite"
+		fontPath="fonts/CeliasBold.otf"
+		android:textSize="18dp"
+		android:layout_alignParentBottom="true"
+		tools:ignore="MissingPrefix"/>
+</RelativeLayout>

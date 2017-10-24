@@ -1,0 +1,215 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:card_view="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="20dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginTop="20dp"
+				android:background="@color/colorWhite"
+				card_view:cardCornerRadius="2dp"
+				card_view:cardUseCompatPadding="false"
+				card_view:contentPadding="0dp">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<EditText
+						android:id="@+id/previouspolicynumber"
+						fontPath="fonts/CeliasMedium.otf"
+						android:layout_width="match_parent"
+						android:layout_height="50dp"
+						android:layout_margin="10dp"
+						android:background="@drawable/border_for_layout_gray"
+						android:ellipsize="end"
+						android:hint="@string/EnterPrevious"
+						android:padding="10dp"
+						android:singleLine="true"
+						tools:ignore="MissingPrefix"/>
+
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="20dp"
+						android:layout_marginTop="30dp"
+						android:orientation="horizontal">
+
+						<FrameLayout
+							android:id="@+id/fl_select"
+							android:layout_width="100dp"
+							android:layout_height="100dp"
+							android:gravity="center">
+
+							<ImageView
+								android:id="@+id/iv_selected"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="5dp"
+								android:contentDescription="@null"
+								android:scaleType="centerCrop"
+								android:src="@drawable/background_add"/>
+
+							<TextView
+								android:id="@+id/text"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:drawableTop="@drawable/add_black"
+								android:gravity="center"
+								android:text="@string/upload_rc_book"
+								android:maxLines="2"
+								android:ellipsize="end"
+								android:textColor="@color/colorGray"
+								android:textSize="15sp"/>
+
+						</FrameLayout>
+
+						<LinearLayout
+							android:id="@+id/rg_docs"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="@dimen/thick"
+							android:orientation="vertical">
+
+
+							<android.support.v7.widget.AppCompatCheckBox
+								android:id="@+id/cb_rc"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:tag="@string/rc"
+								android:clickable="false"
+								android:text="@string/upload_rc_book"/>
+							<android.support.v7.widget.AppCompatCheckBox
+								android:id="@+id/cb_policy"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:tag="@string/policy"
+								android:clickable="false"
+								android:text="@string/uploadPolicy"/>
+
+							<android.support.v7.widget.AppCompatCheckBox
+								android:id="@+id/cb_address"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:tag="@string/address"
+								android:clickable="false"
+								android:text="@string/upload_address_proof"/>
+
+							<android.support.v7.widget.AppCompatCheckBox
+								android:id="@+id/cb_id"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:tag="@string/id"
+								android:clickable="false"
+								android:text="@string/upload_id_proof"/>
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<android.support.v7.widget.RecyclerView
+						android:id="@+id/rv_images"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+					</android.support.v7.widget.RecyclerView>
+
+					<EditText
+						android:id="@+id/nomineename"
+						android:layout_width="match_parent"
+						android:layout_height="50dp"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="20dp"
+						android:background="@drawable/border_for_layout_gray"
+						android:hint="@string/EnterName"
+						android:paddingLeft="10dp"
+						android:textSize="13sp"/>
+
+					<EditText
+						android:id="@+id/nomineerelation"
+						android:layout_width="match_parent"
+						android:layout_height="50dp"
+						android:layout_marginBottom="@dimen/thick"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="20dp"
+						android:background="@drawable/border_for_layout_gray"
+						android:hint="@string/EnterNominee"
+						android:paddingLeft="10dp"
+						android:textSize="13sp"/>
+				</LinearLayout>
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="20dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:background="@color/colorWhite"
+				card_view:cardCornerRadius="2dp"
+				card_view:cardUseCompatPadding="false"
+				card_view:contentPadding="0dp">
+
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:padding="10dp">
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/forsmartcoveragency"
+						android:textSize="@dimen/text_normal"/>
+
+					<EditText
+						android:id="@+id/agentnumber"
+						android:layout_width="match_parent"
+						android:layout_height="50dp"
+						android:layout_marginBottom="@dimen/thick"
+						android:layout_marginLeft="5dp"
+						android:layout_marginRight="5dp"
+						android:layout_marginTop="10dp"
+						android:background="@drawable/border_for_layout_gray"
+						android:hint="@string/EnterAgentNumber"
+						android:paddingLeft="10dp"
+						android:textSize="13sp"/>
+				</LinearLayout>
+			</android.support.v7.widget.CardView>
+
+			<Button
+				android:id="@+id/btnProceedInsurance"
+				fontPath="fonts/CeliasBold.otf"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:layout_marginBottom="20dp"
+				android:layout_marginLeft="25dp"
+				android:layout_marginRight="25dp"
+				android:background="@color/colorsBlue"
+				android:text="@string/proceedTo"
+				android:textAllCaps="false"
+				android:textColor="@color/colorWhite"
+				android:textSize="18sp"
+				tools:ignore="MissingPrefix"/>
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>

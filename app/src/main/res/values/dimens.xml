@@ -1,0 +1,4 @@
+<resources>
+	<dimen name="thick">12dp</dimen>
+	<dimen name="text_normal">14sp</dimen>
+</resources>

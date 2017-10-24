@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.bigappcompany.insurance">
+
+	<uses-permission android:name="INTERNET"/>
+	<uses-permission android:name="ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.WRITE_SMS"/>
+	<uses-permission android:name="android.permission.READ_SMS"/>
+	<uses-permission android:name="android.permission.RECEIVE_SMS"/>
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/playstore_icon"
+		android:label="@string/app_name"
+		android:roundIcon="@mipmap/ic_launcher_round"
+		android:supportsRtl="true"
+		android:theme="@style/AppTheme.NoActionBar">
+		<activity
+			android:name=".splash.SplashScreen"
+			android:label="@string/app_name"
+			android:theme="@style/AppTheme">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".activity.LoginActivity"
+			android:label="@string/title_activity_home_screen"
+			android:theme="@style/AppTheme.NoActionBar"/>
+		<activity
+			android:name=".activity.HomeScreenActivity"
+			android:label="@string/title_activity_home_screen"
+			android:theme="@style/AppTheme.NoActionBar"/>
+		<activity android:name=".activity.VehicleDetailsActivity"/>
+		<activity android:name=".activity.CongragulationActivity"/>
+		<activity android:name=".activity.DetailPreviousActivity"/>
+		<activity android:name=".activity.DetailsPreviousActivityS"/>
+		<activity android:name=".activity.DetailsPreviousPolicy"/>
+		<activity
+			android:name=".activity.InsuranceDetailsActivity"
+			android:label="@string/title_activity_insurance_details"
+			android:theme="@style/AppTheme.NoActionBar"/>
+		<activity android:name=".activity.InsurancePlanActivity"/>
+		<activity
+			android:name=".activity.MainActivity"
+			android:label="@string/title_activity_main"
+			android:theme="@style/AppTheme.NoActionBar">
+		</activity>
+		<activity android:name=".activity.AddNomineeActivity"/>
+		<activity android:name=".activity.SummaryActivity"/>
+		<activity android:name=".activity.PolicyDetails"/>
+
+		<meta-data
+			android:name="com.razorpay.ApiKey"
+			android:value="rzp_test_Xqg8aYplF6gYsu"/>
+
+		<provider
+			android:name="android.support.v4.content.FileProvider"
+			android:authorities="${applicationId}.easyphotopicker.fileprovider"
+			android:exported="false"
+			android:grantUriPermissions="true"
+			>
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/filepaths"
+				/>
+		</provider>
+
+
+		<service android:name=".simpleaws.UploadService"/>
+
+
+		<service
+			android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+			android:enabled="true"/>
+
+		<meta-data
+			xmlns:tools="http://schemas.android.com/tools"
+			android:name="io.fabric.ApiKey"
+			android:value="eed77d7fd5ee7f4526f3de323187c2e7c9c51180"
+			tools:replace="android:value"/>
+	    <!--<meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="eed77d7fd5ee7f4526f3de323187c2e7c9c51180" />-->
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/rvActionBar"
+	android:layout_width="match_parent"
+	android:layout_height="55dp"
+	android:layout_alignParentTop="true"
+	android:background="@drawable/gradient"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context="com.bigappcompany.insurance.activity.DetailsPreviousPolicy">
+
+		<ImageView
+			android:id="@+id/ivHome"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="20dp"
+			android:contentDescription="@null"
+			android:src="@drawable/back" />
+
+		<TextView
+			android:id="@+id/tvHeading"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="15sp"
+			android:layout_toRightOf="@id/ivHome"
+			android:textColor="#FFFFFF"
+			fontPath="fonts/CeliasMedium.otf"
+			tools:ignore="MissingPrefix"
+			android:gravity="center"
+			android:layout_marginRight="50dp"
+			android:textSize="20sp" />
+
+		<RelativeLayout
+			android:id="@+id/rvClick"
+			android:layout_width="130dp"
+			android:layout_height="match_parent">
+		</RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bigappcompany.insurance.activity.SummaryActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rvActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/gradient">
+
+        <ImageView
+            android:id="@+id/ivHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="@null"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15sp"
+            android:layout_toRightOf="@id/ivHome"
+            android:text="@string/AddNominee"
+            android:textColor="#FFFFFF"
+            fontPath="fonts/CeliasMedium.otf"
+            tools:ignore="MissingPrefix"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rvClick"
+            android:layout_width="130dp"
+            android:layout_height="match_parent">
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rvActionBar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvVechicleNumber"
+            fontPath="fonts/CeliasBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="KA-1254Lka"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            tools:text="KA-1254Lka"
+            tools:ignore="MissingPrefix" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+               >
+
+                <TextView
+                    android:id="@+id/tvProduct"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorHeading"
+                    fontPath="fonts/CeliasMedium.otf"
+                    tools:ignore="MissingPrefix"
+                    android:textSize="18dp"
+                    android:text="Third Party" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="18dp"
+                    android:layout_toRightOf="@id/tvProduct"
+                    android:textColor="@color/colorText"
+                    android:text="1000" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/tvSurveyer"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Surveyer"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorHeading"
+                    fontPath="fonts/CeliasMedium.otf"
+                    tools:ignore="MissingPrefix"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorText"
+                    android:layout_toRightOf="@id/tvSurveyer"
+                    android:text="200" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/colorstroke"
+                android:layout_marginBottom="10dp"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Total"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorHeading"
+                    fontPath="fonts/CeliasMedium.otf"
+                    tools:ignore="MissingPrefix"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/colorsBlue"
+                    android:layout_toRightOf="@id/tvTotal"
+                    android:text="1200" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/payHere"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gradient"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.bigappcompany.insurance.activity.CongragulationActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/congratulations"/>
+
+        <RelativeLayout
+            android:id="@+id/rvPostItemFor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvPostItemFor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/Congratulations"
+                fontPath="fonts/CeliasBold.otf"
+                tools:ignore="MissingPrefix"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_below="@+id/tvPostItemFor"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite">
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvResend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@color/colorTransparent"
+            android:gravity="center"
+            android:text="dummyText"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+        <Button
+            android:id="@+id/btnGetDetails"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/GoToMyInsurance"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:background="@drawable/border_for_layout_white"
+            android:textColor="@color/colorWhite"
+            fontPath="fonts/CeliasBold.otf"
+            tools:ignore="MissingPrefix"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>
